@@ -5,7 +5,7 @@ export default function Acesso() {
   return (
     <main className="access-page">
       <section className="access-card">
-        <img src="/images/logo.png" alt="Roweder Disk Gás" />
+        <img src={`${import.meta.env.BASE_URL}images/logo.png`} alt="Roweder Disk Gás" />
         <span className="access-eyebrow">MVP demonstrativo para pedidos online</span>
         <h1>Roweder Disk Gás</h1>
         <p>Escolha como deseja acessar o sistema.</p>
