@@ -9,6 +9,7 @@ import { lojaInicial } from '../../data/loja';
 import { aumentarQuantidade, diminuirQuantidade, obterCarrinho, removerProduto } from '../../services/carrinhoService';
 import { carregarDados } from '../../services/storage';
 import { formatarMoeda } from '../../utils/formatarMoeda';
+import { publicAssetUrl } from '../../utils/publicAssetUrl';
 
 export default function Carrinho() {
   const loja = carregarDados('roweder_config_loja', lojaInicial);
@@ -28,7 +29,7 @@ export default function Carrinho() {
               {carrinho.map((item) => (
                 <article className="cart-item" key={item.id}>
                   <div className="cart-thumb">
-                    <img src={item.imagem} alt={item.nome} onError={(event) => { event.currentTarget.style.display = 'none'; }} />
+                    <img src={publicAssetUrl(item.imagem)} alt={item.nome} onError={(event) => { event.currentTarget.style.display = 'none'; }} />
                     <span>{item.nome.slice(0, 2).toUpperCase()}</span>
                   </div>
                   <div>

@@ -1,11 +1,14 @@
 import { formatarMoeda } from '../utils/formatarMoeda';
+import { publicAssetUrl } from '../utils/publicAssetUrl';
 import Icon from './Icon';
 
 export default function ProdutoCard({ produto, onAdicionar, compacto = false }) {
+  const imagemSrc = publicAssetUrl(produto.imagem);
+
   return (
     <article className={`product-card ${compacto ? 'product-card-compact' : ''}`}>
       <div className="product-image">
-        <img src={produto.imagem} alt={produto.nome} onError={(event) => { event.currentTarget.style.display = 'none'; }} />
+        <img src={imagemSrc} alt={produto.nome} onError={(event) => { event.currentTarget.style.display = 'none'; }} />
         <span className="fallback-product">{produto.nome.slice(0, 2).toUpperCase()}</span>
         {produto.promocao && <span className="badge badge-error">Promo</span>}
         {produto.destaque && <span className="badge badge-blue">Destaque</span>}

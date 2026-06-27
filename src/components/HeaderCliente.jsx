@@ -1,5 +1,6 @@
 import { Link, NavLink } from 'react-router-dom';
 import { obterCarrinho } from '../services/carrinhoService';
+import { publicAssetUrl } from '../utils/publicAssetUrl';
 import Icon from './Icon';
 
 export default function HeaderCliente({ loja }) {
@@ -8,7 +9,7 @@ export default function HeaderCliente({ loja }) {
   return (
     <header className="cliente-header">
       <Link className="brand" to="/home">
-        <img src="/images/logo.png" alt="Roweder" />
+        <img src={publicAssetUrl('/images/logo.png')} alt="Roweder" />
         <span>{loja?.nome || 'Roweder Disk Gás'}</span>
       </Link>
       <nav className="desktop-nav">

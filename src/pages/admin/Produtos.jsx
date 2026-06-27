@@ -3,6 +3,7 @@ import AdminLayout from '../../components/AdminLayout';
 import { produtosIniciais } from '../../data/produtos';
 import { carregarDados, salvarDados } from '../../services/storage';
 import { formatarMoeda } from '../../utils/formatarMoeda';
+import { publicAssetUrl } from '../../utils/publicAssetUrl';
 
 const vazio = {
   nome: '',
@@ -59,7 +60,7 @@ export default function Produtos() {
         {produtos.map((produto) => (
           <article className="product-admin-card" key={produto.id}>
             <div className="admin-product-media">
-              <img src={produto.imagem} alt={produto.nome} onError={(event) => { event.currentTarget.style.display = 'none'; }} />
+              <img src={publicAssetUrl(produto.imagem)} alt={produto.nome} onError={(event) => { event.currentTarget.style.display = 'none'; }} />
               <span>{produto.nome.slice(0, 2).toUpperCase()}</span>
             </div>
             <div className="admin-product-fields">
