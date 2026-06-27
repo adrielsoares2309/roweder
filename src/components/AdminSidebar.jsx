@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
-import { publicAssetUrl } from '../utils/publicAssetUrl';
 import Icon from './Icon';
+import Logo from './Logo';
 
 export default function AdminSidebar() {
   const links = [
@@ -13,7 +13,7 @@ export default function AdminSidebar() {
   return (
     <nav className="admin-sidebar">
       <div className="admin-brand">
-        <img src={publicAssetUrl('/images/logo.png')} alt="Roweder" />
+        <Logo alt="Roweder" />
         <div>
           <strong>Painel admin</strong>
           <span>Roweder Disk Gás</span>

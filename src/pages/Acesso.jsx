@@ -1,12 +1,12 @@
 import { Link } from 'react-router-dom';
 import Icon from '../components/Icon';
-import { publicAssetUrl } from '../utils/publicAssetUrl';
+import Logo from '../components/Logo';
 
 export default function Acesso() {
   return (
     <main className="access-page">
       <section className="access-card">
-        <img src={publicAssetUrl('/images/logo.png')} alt="Roweder Disk Gás" />
+        <Logo />
         <span className="access-eyebrow">MVP demonstrativo para pedidos online</span>
         <h1>Roweder Disk Gás</h1>
         <p>Escolha como deseja acessar o sistema.</p>

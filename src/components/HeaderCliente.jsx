@@ -1,7 +1,7 @@
 import { Link, NavLink } from 'react-router-dom';
 import { obterCarrinho } from '../services/carrinhoService';
-import { publicAssetUrl } from '../utils/publicAssetUrl';
 import Icon from './Icon';
+import Logo from './Logo';
 
 export default function HeaderCliente({ loja }) {
   const quantidade = obterCarrinho().reduce((total, item) => total + item.quantidade, 0);
@@ -9,7 +9,7 @@ export default function HeaderCliente({ loja }) {
   return (
     <header className="cliente-header">
       <Link className="brand" to="/home">
-        <img src={publicAssetUrl('/images/logo.png')} alt="Roweder" />
+        <Logo alt="Roweder" />
         <span>{loja?.nome || 'Roweder Disk Gás'}</span>
       </Link>
       <nav className="desktop-nav">

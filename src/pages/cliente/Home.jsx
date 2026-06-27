@@ -8,7 +8,7 @@ import { produtosIniciais } from '../../data/produtos';
 import { adicionarProduto } from '../../services/carrinhoService';
 import { carregarDados } from '../../services/storage';
 import { formatarMoeda } from '../../utils/formatarMoeda';
-import { publicAssetUrl } from '../../utils/publicAssetUrl';
+import Logo from '../../components/Logo';
 
 export default function Home() {
   const navigate = useNavigate();
@@ -40,7 +40,7 @@ export default function Home() {
             </Link>
           </div>
           <div className="hero-panel">
-            <img src={publicAssetUrl('/images/logo.png')} alt="Roweder Disk Gás" />
+            <Logo />
             <strong>{loja.nome}</strong>
             <span>Gás, bebidas, gelo e conveniência em poucos minutos.</span>
           </div>
