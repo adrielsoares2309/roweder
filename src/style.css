@@ -26,15 +26,16 @@ img { max-width: 100%; display: block; }
 .access-logo,
 .header-logo,
 .admin-logo,
-.hero-logo {
+.home-logo {
   display: block;
   height: auto;
   object-fit: contain;
+  flex-shrink: 0;
 }
 .access-logo { width: 112px; }
 .header-logo { width: 44px; }
 .admin-logo { width: 52px; }
-.hero-logo { width: 180px; }
+.home-logo { width: 180px; }
 
 .access-page {
   min-height: 100vh;

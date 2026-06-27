@@ -40,7 +40,7 @@ export default function Home() {
             </Link>
           </div>
           <div className="hero-panel">
-            <Logo className="hero-logo" />
+            <Logo className="home-logo" />
             <strong>{loja.nome}</strong>
             <span>Gás, bebidas, gelo e conveniência em poucos minutos.</span>
           </div>
