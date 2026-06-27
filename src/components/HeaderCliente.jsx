@@ -9,7 +9,7 @@ export default function HeaderCliente({ loja }) {
   return (
     <header className="cliente-header">
       <Link className="brand" to="/home">
-        <Logo alt="Roweder" />
+        <Logo className="header-logo" alt="Roweder" />
         <span>{loja?.nome || 'Roweder Disk Gás'}</span>
       </Link>
       <nav className="desktop-nav">

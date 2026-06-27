@@ -23,6 +23,19 @@ button { cursor: pointer; border: 0; }
 img { max-width: 100%; display: block; }
 .material-symbols-outlined { line-height: 1; }
 
+.access-logo,
+.header-logo,
+.admin-logo,
+.hero-logo {
+  display: block;
+  height: auto;
+  object-fit: contain;
+}
+.access-logo { width: 112px; }
+.header-logo { width: 44px; }
+.admin-logo { width: 52px; }
+.hero-logo { width: 180px; }
+
 .access-page {
   min-height: 100vh;
   display: grid;

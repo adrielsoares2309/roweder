@@ -6,7 +6,7 @@ export default function Acesso() {
   return (
     <main className="access-page">
       <section className="access-card">
-        <Logo />
+        <Logo className="access-logo" />
         <span className="access-eyebrow">MVP demonstrativo para pedidos online</span>
         <h1>Roweder Disk Gás</h1>
         <p>Escolha como deseja acessar o sistema.</p>

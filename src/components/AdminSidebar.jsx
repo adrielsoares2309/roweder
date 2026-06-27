@@ -13,7 +13,7 @@ export default function AdminSidebar() {
   return (
     <nav className="admin-sidebar">
       <div className="admin-brand">
-        <Logo alt="Roweder" />
+        <Logo className="admin-logo" alt="Roweder" />
         <div>
           <strong>Painel admin</strong>
           <span>Roweder Disk Gás</span>
